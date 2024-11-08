@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title> Register</title>
+        <meta name="viewport" content="device-width" initial-scale="1.0"></meta>
+        <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+.register {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    
+}
+.register h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: balck;
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    padding-left: 50px;
+    /* border: 1px solid whitesmoke; */
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    font-size: 16px;
+    
+}
+
+form{
+    width: 80%;
+}
+
+.input i {
+    color: gray;
+    /* margin-right: 40px; */
+    font-size: 18px;
+    position: relative;
+    left: 6px;
+    bottom: -40px;
+}
+.register button {
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    background-color: skyblue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 160px;}
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="register">
+        <form action="#" method="post">
+            <h2>Register here</h2>
+            <div class="input">
+                <i class="fa fa-university"></i>
+            <input type="text" name="name" placeholder="Enter school name">
+        </div>
+        <div class="input">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" value="diloxyx1@gmail.com" disabled>
+        </div>
+        <div class="input">
+                <i class="fa fa-phone"></i>
+            <input type="tel" name="phone" id="phone" value="0785389089" disabled>
+        </div>
+        <div class="input">
+            <i class="fa fa-user"></i>
+            <input type="text" name="Username" placeholder="Username" required> 
+        </div>
+        <div class="input">
+            <i class="fa fa-lock"></i>
+            <input type="password" name="paswd" placeholder="Password">
+        </div>
+        <div class="input">
+            <i class="fa fa-lock-open"></i>
+            <input type="password" name="paswd" placeholder=" Repeat Password">
+        </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    </body>
+</html>

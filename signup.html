@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title> SIGN UP FORM</title>
+        <meta name="viewport" content="device-width" initial-scale="1.0"></meta>
+        <style>
+            body{
+                background-color: aqua;
+                font-family: 'Times New Roman', Times, serif;
+        
+        }
+            .signup{
+                width: 400px;
+                height: 800px;
+               border-radius: 3px;
+                margin:auto;
+                background-color: white;
+                box-shadow: 0 4px 8px o rgba(0,0,0,0.2);
+
+            }
+            h1{
+                text-align: center;
+                padding-top: 15px;
+
+                
+            }
+            form{
+                width: 350px;
+                margin-left: 40px;
+            }
+            form label{
+                margin-top: 10px;
+                display: flex;
+                font-size: 18px;
+            }
+            form input{
+                width: 200px;
+                padding: 7px;
+                border: 4px solid whitesmoke;
+                border-radius: 8px;
+            
+               
+            }
+            a{
+                color: blue;
+            }
+        input[type="submit"]{
+            width:320px ;
+            height: 35px;
+            margin-top: 20px;
+            background-color: aqua;
+            font-size: 18px;
+            font-weight: bold;
+            border:none;
+            border-radius: 8px;
+
+        }
+    p{
+        text-align: center;
+        margin-top: 20px;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="signup">
+            <h1>Sign up</h1>
+            <form method="" action="">
+                <label>First name</label>
+                <input type="text" name="fname" placeholder=" enter your first name">
+                <label>Last name</label>
+                <input type="text" name="lname" placeholder=" enter your last name">
+                <label>Email</label>
+                <input type="email" name="email" placeholder=" please enter your email">
+                <label>Password</label>
+                <input type="password" name="psswd" placeholder=" type your password">
+                <label>Repeat password</label>
+                <input type="password" name="rpsswd" placeholder=" repeat password">
+    
+                <input type="submit" value="Sign up" >
+            </form>
+            <p> Already have an account <a href="Signin.html" >Sign in</a></p>
+            <p> by clicking sign up button, you agree to our <br>
+            <a href="#">terms and conditions</a> and <a href="#"> policy and privacy</a></p>
+        </div>
+    </body>
+</html>
