@@ -10,23 +10,60 @@
                 margin-top: 30px;
                 justify-items: center;
                 align-items: center;
+                justify-content: center;
+                display: flex;
+                text-align:center;
+            }
+            .container{
+                width: 300px;
+                position: relative;
+
             }
             .Google{
                 margin-bottom: 40px;
+                text-align: center;
             }
             .search{
                 border-radius: 10px;
                border: none;
+               width: 100%;
 
 
             }
-            .search i{
-                padding: auto;
-                margin-left: 10px;
+            .search #search, .search #microphone{
+                position: absolute;
+                
             }
-            .buttons{
+
+            .search #search{
+               left: 5px;
+               margin-top: 6px;
+               
+                
+
+
+            }
+            .search #microphone{
+                right:5px ;
+                margin-top: -25px;
+                margin-right: -40px;
+
+                
+            }
+            
+            .search input[type="text"]{
+                border-radius: 9px;
+                font-size: 25px;
+                padding: 0px 15px 0px 20px;
+                border: 2px solid whitesmoke;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            }
+
+            
+            .buttons button{
                 border: none;
-                margin-top: 5px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 padding: 5px;
             }
             .link a{
@@ -37,21 +74,24 @@
 
         </style>
         <body>
+            <div class="container">
             <div class="Google">
                 <span style="color:rgb(99, 99, 241)">G</span><span style="color:rgb(249, 14, 34)">o</span><span style="color:rgb(239, 232, 27)">o</span><span style="color:rgb(99, 99, 241)">g</span><span style="color:rgb(21, 231, 10)">l</span><span style="color:rgb(228, 13, 88)">e</span>
             </div>
             <div class="search">
-                <div>
-                <i class="fa fa-search"></i>
-                <input type="text" class="search-input" placeholder="">
-                <i class="fa fa-microphone"></i></div>
+               
+                <i class="fa fa-search" id="search"></i>
+                <input type="text" class="search-input" placeholder="" >
+                
+                <img src="mic.svg"  id="microphone">
             </div>
             <div class="buttons">
                 <button>Google Search</button>
-                <button>I'm Feeling Lucky</button>
+                <button>I'm Feeling Lucky </button>
             </div>
             <div class="link">
                 <a href="#">Helpful digital tools and information designed for families</a>
+            </div>
         </body>
     </head>
 </html>
