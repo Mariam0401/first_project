@@ -127,6 +127,29 @@
             color: #b0b3b5;
             font-size: 0.9em;
           }
+          .dropdown{
+            position: absolute;
+            list-style: none;
+           
+            background: #560450;
+           margin: 0;
+           padding: 0;
+            color: #fff;
+            display: none;
+            
+          }
+          .navicons:hover .dropdown{
+            display: block;
+            margin-top: 20px;
+            margin-left: 50px;
+            padding: 10px;
+            
+
+          }
+          .dropdown li{
+            padding: 10px 15px;
+          }
+          
           
 
         </style>
@@ -144,7 +167,13 @@
                         <li><ion-icon name="scan-circle-outline"></ion-icon></li>
                         <li><ion-icon name="chatbox-outline"></ion-icon></li>
                         <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                        <ul class="dropdown">
+                          <li>profile</li>
+                          <li>Block</li>
+                          <li>Setting</li>
+                        </ul>
                     </ul>
+
                     </div>
              </div>
         <div class="ncontacts">
@@ -160,16 +189,20 @@
             <img src="download.jfif" alt="Mimi">
             <div class="details">
               <h4>Mimi</h4>
-              <p>testing</p>
+              
+              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp; testing </p>
+            
             </div>
             <span class="time">08:21</span>
+            <span class="unread" style=" padding: 3px; background-color: #00af91; color: white;margin-top: 50px; margin-left: -30px; border-radius: 50%; border: 1px solid white;">15</span>
 
           </li>
           <li class="contact">
             <img src="download (1).jfif" alt="Addy">
             <div class="details">
               <h4>Addy</h4>
-              <p>Hello there!</p>
+              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp; Hello there!</p>
+              
             </div>
             <span class="time">12:15</span>
 
@@ -178,7 +211,8 @@
             <img src="download (1).jfif" alt="MAMIE">
             <div class="details">
               <h4>MAMMIE</h4>
-              <p>See you tomorrow</p>
+              
+              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;See you tomorrow</p>
             </div>
             <span class="time">09:35</span>
 
@@ -187,7 +221,7 @@
             <img src="download (1).jfif" alt="Umm salman">
             <div class="details">
               <h4>Umm Salman</h4>
-              <p>Asalam alaikum ww</p>
+              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;Asalam alaikum ww</p>
             </div>
             <span class="time">11:11</span>
 
@@ -196,7 +230,7 @@
             <img src="download (1).jfif" alt="Ummi">
             <div class="details">
               <h4>Ummi</h4>
-              <p>Good afternoon</p>
+              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;Good afternoon</p>
             </div>
             <span class="time">12:30</span>
 
