@@ -149,12 +149,21 @@
           .dropdown li{
             padding: 10px 15px;
           }
-          
+        @media(max-width:600px){
+            body{
+              flex-direction: column;
+            }
+            .sidebar{
+              width: 100%;
+              flex: none;
+            }
+        }
           
 
         </style>
     </head>
     <body>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <div class="container">
@@ -190,7 +199,7 @@
             <div class="details">
               <h4>Mimi</h4>
               
-              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp; testing </p>
+              <p><span class="icon" style="color: aqua;"><i class="fas fa-check"></i><i class="fas fa-check"></i> </span> &nbsp; testing </p>
             
             </div>
             <span class="time">08:21</span>
@@ -201,7 +210,7 @@
             <img src="download (1).jfif" alt="Addy">
             <div class="details">
               <h4>Addy</h4>
-              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp; Hello there!</p>
+              <p><span class="icon" style="color: aqua;"><i class="fas fa-check"></i></span> &nbsp; Hello there!</p>
               
             </div>
             <span class="time">12:15</span>
@@ -212,7 +221,7 @@
             <div class="details">
               <h4>MAMMIE</h4>
               
-              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;See you tomorrow</p>
+              <p><span class="icon" style="color: aqua;"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> &nbsp;See you tomorrow</p>
             </div>
             <span class="time">09:35</span>
 
@@ -221,7 +230,7 @@
             <img src="download (1).jfif" alt="Umm salman">
             <div class="details">
               <h4>Umm Salman</h4>
-              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;Asalam alaikum ww</p>
+              <p><span class="icon" style="color: aqua;"><i class="fas fa-check"></i><i class="fas fa-check"></i></span> &nbsp;Asalam alaikum ww</p>
             </div>
             <span class="time">11:11</span>
 
@@ -230,7 +239,7 @@
             <img src="download (1).jfif" alt="Ummi">
             <div class="details">
               <h4>Ummi</h4>
-              <p><span class="icon" style="color: aqua;">✓✓</span> &nbsp;Good afternoon</p>
+              <p><span class="icon" style="color: aqua;"><i class="fas fa-check"></i></span> &nbsp;Good afternoon</p>
             </div>
             <span class="time">12:30</span>
 
