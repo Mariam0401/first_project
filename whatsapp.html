@@ -4,59 +4,117 @@
         <link href="Whatsapp.png" rel="icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <style>
-          *{
-            margin:0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-          }
+          
+          
           body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(
-            #009688 0%,
-             #009688 30px,
-             #009688 30px,
-             #d9dbd5 20% );
+            height: 100vh;
+            color: #fff;
+            background-color: #1f2c33;
           }
           .container{
-            position: relative;
-            width: 800px;
-            max-width: 100%;
-            height: calc(100vh -40px);
-            background: #fff;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
-            display: flex;
+           display: flex;
+           width: 100%;
           }
-          .container .left{
-
-            position: relative;
-            flex: 30%;
-            background: #056c3c;
-            border-right: 1px solid rgba(0, 0, 0, 0.2);
+          .sidebar{
+            width: 30%;
+            background-color: #2a3942;
+            display: flex;
+            flex-direction: column;
+          }
+          .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
           }
         </style>
     </head>
     <body>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <div class="container">
-            <div class="left">
-                <div class="right">
+          <aside class="sidebar">
+            <div class="header">
+               
                     <img src="Whatsapp.png" alt="" class="cover">
-
-
-                </div>
-                <ul class="navicons">
-                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
-                    <li><ion-icon name="chatbox-outline"></ion-icon></li>
-                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-                </ul>
-
-            </div>
+                    <div class="icons">
+                      <ul class="navicons">
+                        <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                        <li><ion-icon name="chatbox-outline"></ion-icon></li>
+                        <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                    </ul>
+                    </div>
+             </div>
+        <div class="ncontacts">
+          <p>contacts</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="search or start a new chat">
 
         </div>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <ul class="contacts">
+          <li class="contacts">
+            <img src="download.jfif" alt="Mimi">
+            <div class="details">
+              <h4>Mimi</h4>
+              <p>testing</p>
+            </div>
+            <span class="time">08:21</span>
+
+          </li>
+          <li class="contact">
+            <img src="download (1).jfif" alt="Addy">
+            <div class="details">
+              <h4>Addy</h4>
+              <p>Hello there!</p>
+            </div>
+            <span class="time">12:15</span>
+
+          </li>
+          <li class="contact">
+            <img src="download (1).jfif" alt="MAMIE">
+            <div class="details">
+              <h4>MAMMIE</h4>
+              <p>See you tomorrow</p>
+            </div>
+            <span class="time">09:35</span>
+
+          </li>
+          <li class="contact">
+            <img src="download (1).jfif" alt="Umm salman">
+            <div class="details">
+              <h4>Umm Salman</h4>
+              <p>Asalam alaikum ww</p>
+            </div>
+            <span class="time">11:11</span>
+
+          </li>
+          <li class="contact">
+            <img src="download (1).jfif" alt="Ummi">
+            <div class="details">
+              <h4>Ummi</h4>
+              <p>Good afternoon</p>
+            </div>
+            <span class="time">12:30</span>
+
+          </li>
+        </ul>
+      </aside>
+        <main class="chat-area">
+          <div class="welcome">
+            <img src="welcome.png" alt="welcome">
+            <h1>whatsapp web</h1>
+            <p>Send and receive messages without keeping your phone online.<br>
+              Use WhatsApp on up to 4 linked devices and 1 phone at the same time.</p>
+              <footer>Built by Jazim Abbas </footer>
+          </div>
+
+        </main>
+
+    </div>    
+
     </body>
 </html>
