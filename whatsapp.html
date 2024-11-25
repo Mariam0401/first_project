@@ -66,6 +66,26 @@
             border-radius: 5px;
             border: none;
           }
+          .contacts{
+           list-style: none;
+            padding: 0;
+            margin: 0;
+           overflow-y: auto;
+           flex-grow: 1;
+          }
+          .contact{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #d0c9c9;
+            cursor: pointer;
+          }
+          .contact img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
 
         </style>
     </head>
@@ -94,7 +114,7 @@
 
         </div>
         <ul class="contacts">
-          <li class="contacts">
+          <li class="contact">
             <img src="download.jfif" alt="Mimi">
             <div class="details">
               <h4>Mimi</h4>
