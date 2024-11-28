@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook UI Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+}
+
+.container {
+    display: grid;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px #c2c4ca;
+}
+nav .navleft{
+    display: flex;
+    align-items: center;
+    
+}
+nav .navleft, nav .navright{
+    display: flex;
+    align-items: center;
+    
+
+}
+nav .navleft > img{
+    
+    width: 40px;
+}
+nav .navleft > input{
+    height: 40px;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 25px;
+   outline: none;
+   background-color: #eee;
+   margin-left: 10px;
+}
+nav .navmiddle{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    
+}
+nav .navmiddle a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin:0px 10px ;
+}
+nav .navmiddle a.active{
+    color: royalblue;
+    position: relative;
+
+}
+nav .navmiddle a.active::after{
+    background-color: royalblue;
+    content: '';
+    width: 100%;
+    height:5px ;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 0;
+}
+nav .navmiddle a > i{
+    font-size: 25px;
+
+
+}
+nav .navright .profile{
+    background: url('./image2.jpg');
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    border-radius: 50%;
+}
+nav .navright a{
+    text-decoration: none;
+    color: #333;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: gridS;
+    place-items: center;
+    margin-left: 1rem;
+    padding: 10px;
+    cursor: pointer;
+}
+nav .navright a > i {
+   font-size: 18px;
+}
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+.shortcuts ul li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+.shortcuts ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.shortcuts ul li:hover {
+    background-color: #f0f2f5;
+}
+
+.main-content {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.story {
+    width: 18%;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.story img {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.story p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #606770;
+}
+
+
+.post-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+
+
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    
+}
+
+.post h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.post p {
+    margin: 10px 0px;
+    
+    color: #1c1e21;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.right-sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.right-sidebar h4 {
+    margin-bottom: 10px;
+    color: #606770;
+    font-size: 16px;
+}
+
+.right-sidebar p,
+.right-sidebar ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #1c1e21;
+}
+
+.right-sidebar p img,
+.right-sidebar ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.right-sidebar ul li:hover {
+    background-color: #f0f2f5;
+    border-radius: 8px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+    .sidebar, .main-content, .right-sidebar {
+        width: 100%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navleft">
+           <img src="./facebook-login.jpg" alt="logo" >
+            <input type="text" placeholder="search media">
+
+
+        </div>
+        <div class="navmiddle">
+            <a href="#">
+                <i class="fa fa-home"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-users"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-user-friends"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-play-circle"></i>
+            </a>
+        </div>
+        <div class="navright">
+            <span class="profile"></span>
+            <a href="#">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-commenting" aria-hidden="true"></i>
+            </a>
+
+            <a href="#">
+
+                <i class="fa fa-bell"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-ellipsis-h"></i>
+            </a>
+           
+        </div>
+    </nav>
+
+    <div class="container">
+       
+        <div class="sidebar">
+            <div class="profile">
+                <img src="image1.jpg" alt="Profile Picture">
+                <span>Umm Raslan</span>
+            </div>
+            <ul>
+                <li><i class="fas fa-tv"></i> Watch</li>
+                <li><i class="fas fa-calendar-alt"></i> Events</li>
+                <li><i class="fas fa-user-friends"></i> Friends</li>
+                <li><i class="fas fa-clock"></i> Memories</li>
+                <li><i class="fas fa-ellipsis-h"></i> See More</li>
+            </ul>
+            <div class="shortcuts">
+                <h4>Shortcuts</h4>
+                <ul>
+                    <li>
+                        <img src="image1.jpg" alt="Save the Pomeroy Theatre"> Save the Pomeroy Theatre
+                    </li>
+                    <li>
+                        <img src="image2.jpg" alt="Weekend Trips"> Weekend Trips
+                    </li>
+                    <li>
+                        <img src="image3.jpg" alt="Jasper's Market"> Jasper's Market
+                    </li>
+                    <li>
+                        <img src="image3.jpg" alt="Hidden Hiking Trails"> Best Hidden Hiking Trails
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+       
+        <div class="main-content">
+            <div class="stories">
+                <div class="story">
+                    <img src="image2.jpg" alt="Uwase">
+                    <p>Uwase</p>
+                </div>
+                <div class="story">
+                    <img src="image3.jpg" alt="Umutesi">
+                    <p>Umutesi</p>
+                </div>
+                <div class="story">
+                    <img src="image3.jpg" alt="Isimbi">
+                    <p>Isimbi</p>
+                </div>
+                <div class="story">
+                    <img src="image2.jpg" alt="Cynthia Lopez">
+                    <p>Cynthia Lopez</p>
+                </div>
+                <div class="story">
+                    <img src="image2.jpg" alt="Afonso Pinto">
+                    <p>Afonso Pinto</p>
+                </div>
+            </div>
+            <div class="post-box">
+                <img src="image1.jpg" alt="Profile Picture">
+                <input type="text" placeholder="What's on your mind, Josephine?">
+            </div>
+            <div class="post">
+                <h4>Makka Kaaba</h4>
+                <p>Best place I’ve ever seen!</p>
+                <img src="image1.jpg" alt="Kaaba">
+               
+            </div>
+            <div class="post">
+                <h4>Hijab and nature</h4>
+                <p>Best place I’ve ever seen!</p>
+                <img src="image2.jpg" alt="Hijab">
+               
+            </div>
+        </div>
+
+       
+        <div class="right-sidebar">
+            <div class="sponsored">
+                <h4>Sponsored</h4>
+                <ul>
+                    <li>
+                        <img src="pizza.jpg" alt="Lebo's Pizza"> Lebo's Pizza
+                    </li>
+                    <li>
+                        <img src="image2.jpg" alt="Jasper's Market"> Jasper's Market Produce Sale
+                    </li>
+                </ul>
+            </div>
+            <div class="birthdays">
+                <h4>Birthdays</h4>
+                <p><i class="fas fa-birthday-cake"></i> Raslan, Keza and 2 others have birthdays today</p>
+            </div>
+            <div class="contacts">
+                <h4>Contacts</h4>
+                <ul>
+                    <li><img src="image2.jpg" alt="Dennis Han"> Dennis Han</li>
+                    <li><img src="image1.jpg" alt="Eric Jones"> Eric Jones</li>
+                    <li><img src="image3.jpg" alt="Cynthia Lopez"> Cynthia Lopez</li>
+                    <li><img src="image2.jpg" alt="Betty Chen"> Betty Chen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

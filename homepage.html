@@ -7,6 +7,186 @@
     
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+
+}
+nav{
+    height: 70px;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px #c2c4ca;
+}
+nav .navleft{
+    display: flex;
+    align-items: center;
+    
+}
+nav .navleft, nav .navright{
+    display: flex;
+    align-items: center;
+    
+
+}
+nav .navleft > img{
+    
+    width: 40px;
+}
+nav .navleft > input{
+    height: 40px;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 25px;
+   outline: none;
+   background-color: #eee;
+   margin-left: 10px;
+}
+nav .navmiddle{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    
+}
+nav .navmiddle a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin:0px 10px ;
+}
+nav .navmiddle a.active{
+    color: royalblue;
+    position: relative;
+
+}
+nav .navmiddle a.active::after{
+    background-color: royalblue;
+    content: '';
+    width: 100%;
+    height:5px ;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 0;
+}
+nav .navmiddle a > i{
+    font-size: 25px;
+
+
+}
+nav .navright .profile{
+    background: url('./image2.jpg');
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    border-radius: 50%;
+}
+nav .navright a{
+    text-decoration: none;
+    color: #333;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: gridS;
+    place-items: center;
+    margin-left: 1rem;
+    padding: 10px;
+    cursor: pointer;
+}
+nav .navright a > i {
+   font-size: 18px;
+
+
+}
+.container{
+   display: flex;
+    background: #eee;
+}
+.container .leftside{
+    width: 250px;
+
+}
+.container .leftside ul{
+    padding: 10px 0px;
+    
+}
+.container .leftside ul li{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+   
+}
+.container .leftside ul li:hover{
+   background: #ddd;
+}
+.container .leftside li i{
+    
+    padding: 7px;
+    margin-top: -8px;
+    color: rgb(58, 19, 165);
+
+}
+.contact{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .contact img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .paragraph{
+    margin-left: 10px;
+    color: #c2c4ca;
+  }
+  .middleside{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .middleside .storysection .story{
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+
+
+  }
+   
+  .middleside .storysection .story > img{
+    
+    height: 100%;
+    
+
+  }
+  .middleside .storysection .story:hover > img{
+    
+  }
+  .middleside .storysection .story .dbcontainer{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .middleside .storysection .story .dbcontainer > img{
+   width: 100%;
+   height: 100%;
+  }
+
+ 
+        </style>
 
     </head>
     <body>
